@@ -21,9 +21,9 @@ class ROI:
         taxes = int(input("how much are taxes? "))
         insurance= int(input("what is your Insurance charge? "))
         utilities =int(input("how much are utilities? "))
-        mortgage = int(input("what is the mortgage cost? "))
+        mortgage = int(input("what is the mortgage cost you pay? "))
         repairs = int(input("what is the cost of repairs and capx you budgeted? "))
-        propmang = int(input("what is the cost for your property manager? "))
+        propmang = int(input("what is the monthly cost for your property manager? "))
         self.expense = (taxes+insurance+utilities+ mortgage+ repairs+ propmang)
         print(f'you will pay ${self.expense} a month from this')
        
@@ -34,7 +34,7 @@ class ROI:
     def annualcash(self):
         downpayment = int(input("how much are you putting down? "))
         cc= int(input("how much are the closing cost? "))
-        rehab= int(input("what is your rehab budget? "))
+        rehab= int(input("what is your rehab budget per month? "))
         ti = (downpayment) +(cc) +(rehab)
         
         self.cashflow()
@@ -44,7 +44,7 @@ class ROI:
 
         
     def run(self):
-        info = input("do you want to find the ROI? or enter Q to quit")
+        info = input("do you want to find the ROI for a proprty? or enter Q to quit")
         while info != 'Q':
             if info:
                 self.getincome()
